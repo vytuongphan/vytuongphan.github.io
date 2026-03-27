@@ -1,0 +1,234 @@
+% LaTeX template for (Academic) CV.
+% The template consists only of this file.
+% Document is to be structured as a normal article.
+% Created in 2017 by Pedro Tiago Martins (ptmartins.info).
+% Dedicated to the public domain.
+% Source: https://github.com/ptsgmartins/cv-LaTeX-template
+
+\documentclass[10.5pt]{article}
+\usepackage{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{libertine} %font
+\usepackage[margin=2cm]{geometry} %margins
+\usepackage{fancyhdr} % header/footer
+\usepackage{lastpage} %last page (for footer)
+\usepackage{hyperref}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[R]{\thepage/\pageref{LastPage}}
+
+\usepackage[usenames,dvipsnames,svgnames,x11names,table]{xcolor} % color
+\newcommand{\cvcolor}{\color{DodgerBlue4}} %easier to change color consistently
+\usepackage{doi} % easy input of doi numbers
+\usepackage{enumitem} % customized lists (reset counters with the resume option)
+\usepackage{titlesec} % customized section headers
+\usepackage{titling} % customized title
+\setlength\parindent{0em} 
+\setlength{\parskip}{0.5em}
+
+%Section Header format
+\titleformat{\section}
+{\LARGE\scshape}{}{0em}{\cvcolor}[\titlerule]
+
+\titleformat{\subsection}
+{\large\scshape}{}{0em}{\cvcolor}
+
+\titleformat{\subsubsection}
+{\bfseries}{}{0em}{}
+
+%Section header spacing
+\titlespacing{\section}
+{0em}{0em}{0em}
+
+\titlespacing{\subsection}
+{0em}{0.75em}{0em}
+
+\titlespacing{\subsubsection}
+{0em}{0em}{0em}
+
+\usepackage{CJKutf8}
+
+%Title
+\renewcommand{\maketitle}{
+\begin{center}
+{\Huge\theauthor}\\
+\vspace{0.5em}
+{\Large \cvcolor{Curriculum Vitae}}\\
+%{\itshape Graduate School of Economics and Management}\\
+%{\itshape 41 Kawauchi, Aoba-ku, Sendai, Miyagi, Japan 980-8576}\\
+%\vspace{0.25em}
+{\color{Gray}phantuongvy0111@gmail.com $|$ (+84) 326986118 $|$ https://vytuongphan.github.io/}
+\end{center}
+}
+
+\begin{document}
+
+\title{Curriculum Vitae} % doesn't actually show up anywhere
+\author{Vy Tuong Phan}
+
+\maketitle
+
+%==========================================
+%========= BIO ============================
+%==========================================
+
+\section{Research Interests}
+Applied Microeconomics, Development Economics, Health Economics
+
+%==========================================
+%========= EDUCATION ======================
+%==========================================
+
+\section{Education}
+
+\textbf{BA, Economics}\hfill\emph{December, 2024}\\
+National Economics University, Hanoi, Vietnam \\
+\textbf{Thesis:} Impact of voluntary health insurance on health care utilization and out–of–pocket health expenditure: Empirical evidence from Vietnam \\
+\textbf{GPA:} 3.5/4.0
+
+
+
+%==========================================
+%========= Employment ======================
+%==========================================
+
+\section{Employment}
+
+\textbf{Research Assistant} \hfill \\
+Development and Policies Research Center (DEPOCEN), Hanoi \hfill \emph{2025/01 -- 2026/01}
+\begin{itemize}
+\item Developing, testing, collecting data, and refining surveys using the World Bank's Survey Solutions
+\item Cleaning, performing statistical analysis, producing visualizations based on the data collected from fieldwork
+\item Applying statistical and econometric methods to analyze data using STATA and R
+\item Writing research proposals/grants, managing research/projects' progress, and writing technical documents required by the projects
+\end{itemize}
+\textbf{Projects involved:}
+\begin{enumerate}
+\item \href{https://www.economics.ku.dk/research/externally-funded-research_new/climate-change-mitigation-in-agroforest-landscapes-through-sustainable-sourcing-policies-cafsus/}{Climate change mitigation in agri-forest landscapes through sustainable sourcing policies (Grantor: DANIDA)}
+    \begin{itemize}
+        \item Questionnaire design
+        \item Enumerator training
+        \item Survey implementation
+        \item Data cleaning and report writing
+    \end{itemize}
+    
+\item Assessing Tobacco Tax Policies for evidence-based debate: Evaluating the Impact on Cigarette Affordability and Consumption in Viet Nam (Grantor: Johns Hopkins University)
+    \begin{itemize}
+        \item Questionnaire design
+        \item Enumerator training, and survey implementation
+        \item Data cleaning, statistical analysis, and report writing
+        \item Tax simulation application development
+    \end{itemize}
+\end{enumerate}
+
+\textbf{Research Assistant} \hfill \\
+Vietnam Institute for Economics and Policy Research, Hanoi \hfill \emph{2023/10 -- 2024/03}
+\begin{itemize}
+\item Collecting, cleaning, and organizing data from multiple sources, conducting systematic literature review, and writing technical reports
+\item Applying quantitative methods to analyze issues in international trade and goverment policy, using STATA
+\end{itemize}
+
+%==========================================
+%========= RESEARCH ACHIEVEMENTS ==========
+%==========================================
+
+\section{Research}
+
+\subsection{Publications}
+
+\begin{enumerate}[label={[\arabic*]}]
+
+\item Measuring the impact of COVID-19 and government policy responses on trade flow: the case of ASEAN countries. Journal of Economics and Development (2025) 27 (3): 246–263. (with Q.V. Nguyen, T.T. Nguyen, V.H. Le, H.L. Bui, P.T. Nguyen, T.H.T. Do) \doi{10.1108/JED-08-2024-0302}
+
+% \textbf{Abstract:}
+% \begin{quote}
+% The epidemic caused by the coronavirus disease (COVID-19) has affected international trade activities between Asian developing and emerging economies, especially the ASEAN region. This paper aims to examine and measure the impact of COVID-19 and government responses on trade flow using the gravity model of trade. Using the trade records of ten ASEAN countries exporting all over the world from January 2020 to December 2022, we find a negative impact of the COVID-19 pandemic on trade flow. However, ASEAN countries that participate in regional trade agreements (RTAs) have stronger trade flows than countries that do not participate. Finally, countries implementing effective COVID-19 policy responses exhibit a more favorable trade performance and improve their overall economic stability, particularly in the face of increasing COVID-19 burdens.
+% \end{quote}
+
+\end{enumerate}
+
+\subsection{Work in Progress}
+
+%\begin{enumerate}[resume*] %notice the resume* option; counter and format continue
+\begin{enumerate}[label={[\arabic*]}]
+
+\item Superstar ESG firm in Vietnam: Does it really matter? (with V.H. Le)
+
+% \textbf{Abstract:}
+% \begin{quote}
+% This paper employs an overlapping generations model to analyze how placing the burden of caring for both elderly parents and children on the working generation shapes fertility and other economic outcomes. In the model, fertility decisions create intergenerational spillovers. When one generation has fewer children, the next generation faces a heavier caregiving burden for its elderly parents, which in turn discourages childbearing. The model reveals sharply different long-run trajectories depending on the time intensity of caregiving. If care demands are moderate, sustainable growth remains feasible despite these externalities. However, when care becomes highly time-intensive, fertility declines, labor supply contracts, and the economy risks falling into a ``nursing hell," where most time is devoted to caregiving. Policy measures, such as child allowances, can alleviate this dynamic by expanding the number of siblings and reducing the per-capita caregiving burden. Yet if care demands are extremely high from the outset, even such interventions cannot avert structural collapse.
+% \end{quote}
+
+\item Tobacco Market Pricing Strategies Ahead of Tax Adjustment: Evidence from A Unique Retail Price Survey (with N.M. Nguyen, M.D. Doan, V.H. Le, H.M. Bui, A.N. Nguyen)
+% \textbf{Abstract:}
+% \begin{quote}
+% This study analyzes cigarette price dynamics in Viet Nam’s licit and illicit markets ahead of proposed excise tax reforms. Using a February 2025 retail survey of 5,366 observations in Ha Noi and Ho Chi Minh City, we document clear pre-emptive price increases by the tobacco industry, with overshifting averaging 8.3\% and nearly 10\% in the economy segment. Illicit cigarette prices also rose by about 2,400 VND, showing shadow pricing rather than a stable, low-price market. Both markets are responsive and segmented, contradicting claims that tax hikes will drive consumers to a static illicit sector. The evidence indicates strong market capacity to absorb substantial tax-driven price increases and supports the implementation of robust excise tax reforms.
+% \end{quote}
+
+\item Rational Addiction, Cigarette Consumption and Quitting Behaviors (with QT Tran, and Anh Nguyen)
+
+\end{enumerate}
+
+%==========================================
+%========= GRANTS =========================
+%==========================================
+
+\section{Grants \& Awards}
+
+\textbf{Best Paper Prize in the 15th Vietnam Economist Annual Meeting }\hfill \emph{December 6, 2024}\\
+for the paper: \textit{Superstar ESG firm in Vietnam: Does it really matter?}
+
+\textbf{Second prize in Scientific Research Student of National Economics University }\hfill \emph{August 30, 2023}\\
+for the project: \textit{Decomposed and Partial Connectedness Measures for Economic Globalization, Non-renewable and Renewable Energy Consumption in Vietnam}
+
+\textbf{Third prize in Scientific Research Student of National Economics University }\hfill \emph{April 14, 2023}\\
+for the project: \textit{A Nexus between Digital Transformation and Marine Living Resources: A Path toward Sustainable Blue Economy}
+%==========================================
+%========= CONFERENCE PRESENTATIONS =======
+%==========================================
+
+\section{Conference Proceeding}
+
+\begin{enumerate}[label={[\arabic*]}]
+\item The 15th Vietnam Economist Annual Meeting \\
+	\textbf{Venue:} Binh Duong, Vietnam on December 05 -- 06, 2024 \\
+	\textbf{Presentation:} Superstar ESG firm in Vietnam: Does it really matter?
+\item The 11th International Student Forum on Environmental, Social and Governance \\
+	\textbf{Venue:} Chiang Mai, Thailand on August 28 -- 30, 2024 \\
+	\textbf{Presentation:} ESG Disclosure and Firm Performance: An Empirical Study from Vietnam.
+\item The International Conference on Policy Lessons for a Post-COVID-19 Recovery (ADBI) \\
+	\textbf{Venue:} Tokyo, Japan on March 07--08, 2024 \\
+	\textbf{Presentation:} Measuring Impact of Covid-19 And Government Policy Responses On Trade Flow: The Case of ASEAN Countries
+\item The 5th International Conference on Contemporary Issues in Economics, Management and Business \\
+	\textbf{Venue:} Hanoi, Vietnam on November 5, 2022 \\
+	\textbf{Presentation:} Decomposed and Partial Connectedness Measures for Economics Globalization, Non-renewable and Renewable Energy Consumption in Vietnam
+\end{enumerate}
+
+\section{Leadership \& Activities}
+\textbf{Debate Empowering Society @ National Economics University}\hfill \emph{December 2022 - July 2023}\\
+\textit{Club Vice President}
+\begin{itemize}
+    \item Assist the president with the planning and execution of club meetings
+    \item Organize and coordinate debate tournaments and other events
+    \item Represent the club to the school administration, other clubs, and the community
+\end{itemize}
+
+\section{Skills}
+
+\begin{enumerate}
+	\item Programming skills: STATA, R, Eviews, \LaTeX
+	\item Special Training: \textbf{Quantitative Tools for Economic and Policy Research} organized by the Asian Development Bank Institute, from 12--27 September, 2024. 
+\end{enumerate}
+
+
+\section{Languages}
+
+\textbf{Vietnamese} (native), \textbf{English} (fluent, IELTS 7.5)
+
+\end{document}
+
+% Local Variables:
+% mode: latex
+% End:
