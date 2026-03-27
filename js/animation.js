@@ -205,11 +205,17 @@
   }
 
   function drawVignette() {
+    var isLight = document.documentElement.getAttribute('data-theme') === 'light';
     var cx = width / 2, cy = height / 2;
     var md = Math.max(width, height);
     var v = ctx.createRadialGradient(cx, cy, md * 0.2, cx, cy, md * 0.85);
-    v.addColorStop(0, 'rgba(7, 16, 31, 0)');
-    v.addColorStop(1, 'rgba(7, 16, 31, 0.55)');
+    if (isLight) {
+      v.addColorStop(0, 'rgba(240, 244, 251, 0)');
+      v.addColorStop(1, 'rgba(240, 244, 251, 0.55)');
+    } else {
+      v.addColorStop(0, 'rgba(7, 16, 31, 0)');
+      v.addColorStop(1, 'rgba(7, 16, 31, 0.55)');
+    }
     ctx.fillStyle = v;
     ctx.fillRect(0, 0, width, height);
   }
@@ -223,7 +229,8 @@
     if (prefersReduced) dt = 0;
 
     ctx.clearRect(0, 0, width, height);
-    ctx.fillStyle = '#07101f';
+    ctx.fillStyle = document.documentElement.getAttribute('data-theme') === 'light'
+      ? '#f0f4fb' : '#07101f';
     ctx.fillRect(0, 0, width, height);
 
     var time = ts / 1000;

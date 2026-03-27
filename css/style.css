@@ -652,6 +652,61 @@ footer {
 }
 
 /* ============================================================
+   NAV RIGHT GROUP + THEME TOGGLE
+   ============================================================ */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--glass-border);
+  border-radius: 6px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 4px 7px;
+  transition: border-color 0.2s, color 0.2s;
+}
+.theme-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ============================================================
+   LIGHT MODE
+   ============================================================ */
+[data-theme="light"] {
+  --navy-deep:      #f0f4fb;
+  --navy-mid:       #e2ecf7;
+  --glass-bg:       rgba(255, 255, 255, 0.82);
+  --glass-light:    rgba(240, 246, 255, 0.72);
+  --glass-border:   rgba(91, 155, 213, 0.22);
+  --accent:         #2563a8;
+  --accent-hover:   #1a4f8c;
+  --text-primary:   #0d1b38;
+  --text-secondary: #3d5a80;
+  --text-muted:     #7a9ec4;
+}
+
+[data-theme="light"] body {
+  background: var(--navy-deep);
+  color: var(--text-primary);
+}
+
+[data-theme="light"] nav {
+  background: rgba(240, 244, 251, 0.92);
+}
+
+[data-theme="light"] h1,
+[data-theme="light"] .hero-name {
+  color: var(--text-primary);
+}
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width: 700px) {
@@ -671,6 +726,7 @@ footer {
     border-bottom: 1px solid var(--glass-border);
   }
   .nav-links.open { display: flex; }
+  [data-theme="light"] .nav-links { background: rgba(240, 244, 251, 0.97); }
   .nav-links li { border-bottom: 1px solid rgba(90,155,220,0.08); }
   .nav-links a {
     display: block;

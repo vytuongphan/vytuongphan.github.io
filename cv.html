@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script>if(localStorage.getItem('theme')==='light')document.documentElement.setAttribute('data-theme','light');</script>
 </head>
 <body>
 
@@ -18,16 +19,19 @@
   <!-- NAV -->
   <nav>
     <a href="index.html" class="nav-brand">Vy Tuong Phan</a>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="cv.html" class="active">CV</a></li>
-      <li><a href="notes/index.html">Notes</a></li>
-      <li><a href="bookshelf.html">Bookshelf</a></li>
-    </ul>
+    <div class="nav-right">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="cv.html" class="active">CV</a></li>
+        <li><a href="notes/index.html">Notes</a></li>
+        <li><a href="bookshelf.html">Bookshelf</a></li>
+      </ul>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light mode">☀</button>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
 
   <main>
@@ -263,6 +267,7 @@
 </div>
 
 <script src="js/animation.js"></script>
+<script src="js/theme.js"></script>
 <script>
   var toggle = document.getElementById('nav-toggle');
   var links  = document.getElementById('nav-links');

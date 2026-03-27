@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script>if(localStorage.getItem('theme')==='light')document.documentElement.setAttribute('data-theme','light');</script>
 </head>
 <body>
 
@@ -19,16 +20,19 @@
   <!-- NAV -->
   <nav>
     <a href="index.html" class="nav-brand">Vy Tuong Phan</a>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="cv.html">CV</a></li>
-      <li><a href="notes/index.html">Notes</a></li>
-      <li><a href="bookshelf.html">Bookshelf</a></li>
-    </ul>
+    <div class="nav-right">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="notes/index.html">Notes</a></li>
+        <li><a href="bookshelf.html">Bookshelf</a></li>
+      </ul>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light mode">☀</button>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
 
   <main>
@@ -63,18 +67,13 @@
           and <strong>health economics</strong>. I aim to master a skillset drawn from econometrics,
           statistics, and data science to produce rigorous, policy-relevant work.
         </p>
-        <p style="margin-bottom:0">
-          Currently a Research Assistant at
-          <a href="https://depocen.org/en/" target="_blank" rel="noopener">Development and Policies Research Center (DEPOCEN)</a>,
-          where I work on tobacco tax policy and climate-change–related projects.
-        </p>
       </div>
 
       <!-- PASSIONS -->
       <div class="glass-card">
         <div class="section-label">Me</div>
         <p style="margin-bottom:1rem">
-          Outside research, my life is pretty much: cats, memes, and touching grass — in that order.
+          Outside research, my life is pretty much: cats, memes, and touching grass.
         </p>
         <div class="passions-grid">
           <div class="passion-card">
@@ -111,6 +110,7 @@
 </div>
 
 <script src="js/animation.js"></script>
+<script src="js/theme.js"></script>
 <script>
   // Mobile nav toggle
   var toggle = document.getElementById('nav-toggle');
