@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV — Vy Tuong Phan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+
+<div class="site-wrapper">
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-brand">Vy Tuong Phan</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="cv.html" class="active">CV</a></li>
+      <li><a href="notes/index.html">Notes</a></li>
+      <li><a href="bookshelf.html">Bookshelf</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="section">
+
+      <div class="section-label">Curriculum Vitae</div>
+      <h1>Vy Tuong Phan</h1>
+
+      <a href="https://drive.google.com/file/d/1ZZQNFNr0uaBZDKNyE5f08d1WsvJ8hG_d/view?usp=sharing"
+         target="_blank" rel="noopener" class="cv-pdf-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download PDF version
+      </a>
+
+      <!-- EDUCATION -->
+      <div class="glass-card">
+        <h3 style="margin-top:0">Education</h3>
+        <div class="cv-section">
+          <div class="cv-entry">
+            <div class="cv-date">Dec 2024</div>
+            <div class="cv-content">
+              <div class="cv-title">BA, Economics</div>
+              <div class="cv-subtitle">National Economics University, Hanoi, Vietnam</div>
+              <p class="cv-detail">
+                Thesis: <em>Impact of voluntary health insurance on health care utilization and out-of-pocket health expenditure: Empirical evidence from Vietnam</em>
+              </p>
+              <p class="cv-detail">GPA: 3.5 / 4.0</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EMPLOYMENT -->
+      <div class="glass-card">
+        <h3 style="margin-top:0">Employment</h3>
+        <div class="cv-section">
+
+          <div class="cv-entry">
+            <div class="cv-date">Jan 2025 –<br>Present</div>
+            <div class="cv-content">
+              <div class="cv-title">Research Assistant</div>
+              <div class="cv-subtitle">
+                <a href="https://depocen.org/en/" target="_blank" rel="noopener">Development and Policies Research Center (DEPOCEN)</a>, Hanoi
+              </div>
+              <ul class="cv-bullets">
+                <li>Developing, testing, collecting data, and refining surveys using the World Bank's Survey Solutions</li>
+                <li>Cleaning, performing statistical analysis, producing visualizations based on fieldwork data</li>
+                <li>Applying statistical and econometric methods using STATA and R</li>
+                <li>Writing research proposals/grants, managing project progress, and writing technical documents</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">Oct 2023 –<br>Mar 2024</div>
+            <div class="cv-content">
+              <div class="cv-title">Research Assistant</div>
+              <div class="cv-subtitle">Vietnam Institute for Economics and Policy Research, Hanoi</div>
+              <ul class="cv-bullets">
+                <li>Collecting, cleaning, and organizing data from multiple sources; conducting systematic literature reviews</li>
+                <li>Applying quantitative methods to analyze international trade and green finance issues using STATA</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- RESEARCH -->
+      <div class="glass-card">
+        <h3 style="margin-top:0">Research</h3>
+
+        <p style="font-family:'Inter',sans-serif; font-size:0.78rem; font-weight:600; text-transform:uppercase; letter-spacing:0.1em; color:var(--text-secondary); margin-bottom:0.8rem;">Publications</p>
+        <div class="cv-entry">
+          <div class="cv-date">2025</div>
+          <div class="cv-content">
+            <p class="cv-detail">
+              Measuring the impact of COVID-19 and government policy responses on trade flow: the case of ASEAN countries.
+              <em>Journal of Economics and Development</em>, 27(3): 246–263.
+              (with Q.V. Nguyen, T.T. Nguyen, V.H. Le, H.L. Bui, P.T. Nguyen, T.H.T. Do)
+            </p>
+          </div>
+        </div>
+
+        <p style="font-family:'Inter',sans-serif; font-size:0.78rem; font-weight:600; text-transform:uppercase; letter-spacing:0.1em; color:var(--text-secondary); margin-bottom:0.8rem; margin-top:1.2rem;">Work in Progress</p>
+        <div class="cv-entry">
+          <div class="cv-date"></div>
+          <div class="cv-content">
+            <ul class="cv-bullets" style="list-style:decimal">
+              <li>Superstar ESG firm in Vietnam: Does it really matter? (with V.H. Le)</li>
+              <li>Tobacco Market Pricing Strategies Ahead of Tax Adjustment: Evidence from a Unique Retail Price Survey (with N.M. Nguyen, M.D. Doan, V.H. Le, H.M. Bui, A.N. Nguyen)</li>
+              <li>Rational Addiction, Cigarette Consumption and Quitting Behaviors (with QT Tran and Anh Nguyen)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- GRANTS & AWARDS -->
+      <div class="glass-card">
+        <h3 style="margin-top:0">Grants &amp; Awards</h3>
+        <div class="cv-section">
+
+          <div class="cv-entry">
+            <div class="cv-date">Dec 2024</div>
+            <div class="cv-content">
+              <div class="cv-title">Best Paper Prize</div>
+              <div class="cv-subtitle">15th Vietnam Economist Annual Meeting</div>
+              <p class="cv-detail">For the paper: <em>Superstar ESG firm in Vietnam: Does it really matter?</em></p>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">Aug 2023</div>
+            <div class="cv-content">
+              <div class="cv-title">Second Prize, Scientific Research Student</div>
+              <div class="cv-subtitle">National Economics University</div>
+              <p class="cv-detail">Project: <em>Decomposed and Partial Connectedness Measures for Economic Globalization, Non-renewable and Renewable Energy Consumption in Vietnam</em></p>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">Apr 2023</div>
+            <div class="cv-content">
+              <div class="cv-title">Third Prize, Scientific Research Student</div>
+              <div class="cv-subtitle">National Economics University</div>
+              <p class="cv-detail">Project: <em>A Nexus between Digital Transformation and Marine Living Resources: A Path toward Sustainable Blue Economy</em></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CONFERENCES -->
+      <div class="glass-card">
+        <h3 style="margin-top:0">Conference Proceedings</h3>
+        <div class="cv-section">
+
+          <div class="cv-entry">
+            <div class="cv-date">Dec 2024</div>
+            <div class="cv-content">
+              <div class="cv-title">15th Vietnam Economist Annual Meeting</div>
+              <div class="cv-subtitle">Binh Duong, Vietnam</div>
+              <p class="cv-detail">Presentation: <em>Superstar ESG firm in Vietnam: Does it really matter?</em></p>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">Aug 2024</div>
+            <div class="cv-content">
+              <div class="cv-title">11th International Student Forum on ESG</div>
+              <div class="cv-subtitle">Chiang Mai, Thailand</div>
+              <p class="cv-detail">Presentation: <em>ESG Disclosure and Firm Performance: An Empirical Study from Vietnam</em></p>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">Mar 2024</div>
+            <div class="cv-content">
+              <div class="cv-title">International Conference on Policy Lessons for a Post-COVID-19 Recovery (ADBI)</div>
+              <div class="cv-subtitle">Tokyo, Japan</div>
+              <p class="cv-detail">Presentation: <em>Measuring Impact of Covid-19 and Government Policy Responses on Trade Flow: The Case of ASEAN Countries</em></p>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">Nov 2022</div>
+            <div class="cv-content">
+              <div class="cv-title">National Scientific Conference: New Trends in Economics Education and Research</div>
+              <div class="cv-subtitle">Hanoi, Vietnam</div>
+              <p class="cv-detail">Presentation: <em>Research Trends in Modern Economics</em></p>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-date">Nov 2022</div>
+            <div class="cv-content">
+              <div class="cv-title">5th International Conference on Contemporary Issues in Economics, Management and Business</div>
+              <div class="cv-subtitle">Hanoi, Vietnam</div>
+              <p class="cv-detail">Presentation: <em>Decomposed and Partial Connectedness Measures for Economics Globalization, Non-renewable and Renewable Energy Consumption in Vietnam</em></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- LEADERSHIP -->
+      <div class="glass-card">
+        <h3 style="margin-top:0">Leadership &amp; Activities</h3>
+        <div class="cv-section">
+          <div class="cv-entry">
+            <div class="cv-date">Dec 2022 –<br>Jul 2023</div>
+            <div class="cv-content">
+              <div class="cv-title">Club Vice President</div>
+              <div class="cv-subtitle">Debate Empowering Society @ National Economics University</div>
+              <ul class="cv-bullets">
+                <li>Assisted the president with planning and execution of club meetings</li>
+                <li>Organized and coordinated debate tournaments and events</li>
+                <li>Represented the club to the school administration, other clubs, and the community</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SKILLS & LANGUAGES -->
+      <div class="glass-card">
+        <h3 style="margin-top:0">Skills &amp; Languages</h3>
+        <div class="cv-entry">
+          <div class="cv-date">Technical</div>
+          <div class="cv-content">
+            <p class="cv-detail">STATA, R, EViews, LaTeX</p>
+            <p class="cv-detail" style="margin-top:0.4rem">
+              <strong>Special Training:</strong> Quantitative Tools for Economic and Policy Research,
+              Asian Development Bank Institute, September 12–27, 2024
+            </p>
+          </div>
+        </div>
+        <div class="cv-entry">
+          <div class="cv-date">Languages</div>
+          <div class="cv-content">
+            <p class="cv-detail">Vietnamese (native) &nbsp;·&nbsp; English (fluent, IELTS 7.5)</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2026 Vy Tuong Phan
+  </footer>
+
+</div>
+
+<script src="js/animation.js"></script>
+<script>
+  var toggle = document.getElementById('nav-toggle');
+  var links  = document.getElementById('nav-links');
+  toggle.addEventListener('click', function () { links.classList.toggle('open'); });
+</script>
+
+</body>
+</html>

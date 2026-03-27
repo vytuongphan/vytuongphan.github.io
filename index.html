@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vy Tuong Phan</title>
+  <meta name="description" content="Personal website of Vy Tuong Phan — economics researcher interested in applied microeconomics, development economics, and health economics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+
+<div class="site-wrapper">
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-brand">Vy Tuong Phan</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="notes/index.html">Notes</a></li>
+      <li><a href="bookshelf.html">Bookshelf</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-greeting">Hello, I'm</div>
+      <h1 class="hero-name">Vy Tuong Phan</h1>
+      <p class="hero-tagline">
+        A girl who's really into economics and statistics.<br>
+        I recently got my bachelor's degree in
+        <a href="https://economics.neu.edu.vn/cu-nhan-kinh-te-hoc/" target="_blank" rel="noopener">Economics</a>
+        at <a href="https://en.neu.edu.vn/" target="_blank" rel="noopener">National Economics University</a>.
+      </p>
+      <p class="hero-tagline" style="font-size:1rem; margin-top:-1rem;">
+        I'm currently applying for MSc / Predoc programs in the 2026/2027 academic year.
+      </p>
+      <div class="hero-links">
+        <a href="research.html" class="btn btn-outline">Research</a>
+        <a href="cv.html" class="btn btn-outline">CV</a>
+        <a href="mailto:phantuongvy0111@gmail.com" class="btn btn-outline">Email</a>
+      </div>
+    </section>
+
+    <!-- BIO -->
+    <div class="home-bio">
+
+      <div class="glass-card">
+        <div class="section-label">Research Interests</div>
+        <p>
+          My research focuses on <strong>applied microeconomics</strong>, <strong>development economics</strong>,
+          and <strong>health economics</strong>. I aim to master a skillset drawn from econometrics,
+          statistics, and data science to produce rigorous, policy-relevant work.
+        </p>
+        <p style="margin-bottom:0">
+          Currently a Research Assistant at
+          <a href="https://depocen.org/en/" target="_blank" rel="noopener">Development and Policies Research Center (DEPOCEN)</a>,
+          where I work on tobacco tax policy and climate-change–related projects.
+        </p>
+      </div>
+
+      <!-- PASSIONS -->
+      <div class="glass-card">
+        <div class="section-label">Me</div>
+        <p style="margin-bottom:1rem">
+          Outside research, my life is pretty much: cats, memes, and touching grass — in that order.
+        </p>
+        <div class="passions-grid">
+          <div class="passion-card">
+            <img src="image/cat.jpg" alt="A cat" loading="lazy">
+            <div class="passion-label">Cats</div>
+          </div>
+          <div class="passion-card">
+            <img src="image/meme.JPG" alt="A meme" loading="lazy">
+            <div class="passion-label">Memes</div>
+          </div>
+          <div class="passion-card">
+            <img src="image/grass.jpg" alt="Touching grass" loading="lazy">
+            <div class="passion-label">Touch Grass</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="glass-card" style="text-align:center; padding: 1.6rem;">
+        <p style="margin-bottom:0; color: var(--text-secondary);">
+          Feel free to contact me at
+          <a href="mailto:phantuongvy0111@gmail.com">phantuongvy0111@gmail.com</a>
+        </p>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    &copy; 2026 Vy Tuong Phan
+  </footer>
+
+</div>
+
+<script src="js/animation.js"></script>
+<script>
+  // Mobile nav toggle
+  var toggle = document.getElementById('nav-toggle');
+  var links  = document.getElementById('nav-links');
+  toggle.addEventListener('click', function () {
+    links.classList.toggle('open');
+  });
+</script>
+
+</body>
+</html>

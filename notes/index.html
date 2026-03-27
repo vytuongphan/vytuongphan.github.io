@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lecture Notes — Vy Tuong Phan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+
+<div class="site-wrapper">
+
+  <!-- NAV -->
+  <nav>
+    <a href="../index.html" class="nav-brand">Vy Tuong Phan</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../research.html">Research</a></li>
+      <li><a href="../cv.html">CV</a></li>
+      <li><a href="index.html" class="active">Notes</a></li>
+      <li><a href="../bookshelf.html">Bookshelf</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="section">
+
+      <div class="section-label">Self Study</div>
+      <h1>Lecture Notes</h1>
+      <p style="color:var(--text-secondary); max-width:560px; margin-bottom:2rem;">
+        Notes from online courses I've taken — mostly LSE mathematics and statistics.
+        Click on a course to read the full notes.
+      </p>
+
+      <!-- Mathematics -->
+      <h3 style="margin-top:0">Mathematics</h3>
+      <div class="notes-grid">
+
+        <a href="math-part-1.html" class="note-card">
+          <div class="note-card-label">LSE · Mathematics 1</div>
+          <div class="note-card-title">Part 1: Differential Calculus</div>
+          <div class="note-card-source">
+            <a href="https://learning.edx.org/course/course-v1:LSE+LSEMT105a+3T2023/home"
+               target="_blank" rel="noopener" style="color:var(--text-secondary)"
+               onclick="event.stopPropagation()">edX · LSEMT105a</a>
+          </div>
+        </a>
+
+        <div class="note-card coming-soon">
+          <div class="note-card-label">LSE · Mathematics 1</div>
+          <div class="note-card-title">Part 2: Integral Calculus, Algebra &amp; Applications</div>
+          <div class="note-card-source">edX · LSEMT105b &nbsp;·&nbsp; Coming soon</div>
+        </div>
+
+      </div>
+
+      <!-- Statistics -->
+      <h3>Statistics</h3>
+      <div class="notes-grid">
+
+        <div class="note-card coming-soon">
+          <div class="note-card-label">LSE · Statistics 1</div>
+          <div class="note-card-title">Part 1: Introductory Statistics, Probability &amp; Estimation</div>
+          <div class="note-card-source">edX · Coming soon</div>
+        </div>
+
+        <div class="note-card coming-soon">
+          <div class="note-card-label">LSE · Statistics 1</div>
+          <div class="note-card-title">Part 2: Statistical Methods</div>
+          <div class="note-card-source">edX · Coming soon</div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2026 Vy Tuong Phan
+  </footer>
+
+</div>
+
+<script src="../js/animation.js"></script>
+<script>
+  var toggle = document.getElementById('nav-toggle');
+  var links  = document.getElementById('nav-links');
+  toggle.addEventListener('click', function () { links.classList.toggle('open'); });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookshelf — Vy Tuong Phan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+
+<div class="site-wrapper">
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-brand">Vy Tuong Phan</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="notes/index.html">Notes</a></li>
+      <li><a href="bookshelf.html" class="active">Bookshelf</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="section">
+
+      <div class="section-label">Reading</div>
+      <h1>Bookshelf</h1>
+      <p style="color:var(--text-secondary); max-width:560px; margin-bottom:2.4rem;">
+        Books I've read or am working through — arranged by genre.
+      </p>
+
+      <!-- ECONOMETRICS & CAUSAL INFERENCE -->
+      <div class="shelf-genre">
+        <div class="shelf-genre-title">Econometrics &amp; Causal Inference</div>
+        <ul class="book-list">
+          <li class="book-item">
+            <div class="book-title">Mostly Harmless Econometrics</div>
+            <div class="book-author">Joshua D. Angrist &amp; Jörn-Steffen Pischke</div>
+          </li>
+          <li class="book-item">
+            <div class="book-title">Causal Inference in Econometrics</div>
+            <div class="book-author">Various</div>
+          </li>
+          <li class="book-item">
+            <div class="book-title">Econometric Analysis of Cross-Sectional and Panel Data</div>
+            <div class="book-author">Jeffrey M. Wooldridge</div>
+          </li>
+          <li class="book-item">
+            <div class="book-title">Multilevel and Longitudinal Modeling</div>
+            <div class="book-author">Harvey Goldstein</div>
+          </li>
+          <li class="book-item">
+            <div class="book-title">Nonlinear Models and Causal Inference Methods</div>
+            <div class="book-author">Various</div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- MACROECONOMICS -->
+      <div class="shelf-genre">
+        <div class="shelf-genre-title">Macroeconomics</div>
+        <ul class="book-list">
+          <li class="book-item">
+            <div class="book-title">Macroeconomics (8th Edition)</div>
+            <div class="book-author">Olivier Blanchard</div>
+          </li>
+          <li class="book-item">
+            <div class="book-title">Advanced Macroeconomics</div>
+            <div class="book-author">David Romer</div>
+          </li>
+          <li class="book-item">
+            <div class="book-title">The Great Recession and Developing Countries</div>
+            <div class="book-author">World Bank</div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- DEVELOPMENT ECONOMICS -->
+      <div class="shelf-genre">
+        <div class="shelf-genre-title">Development Economics</div>
+        <ul class="book-list">
+          <li class="book-item">
+            <div class="book-title">Poor Economics</div>
+            <div class="book-author">Abhijit V. Banerjee &amp; Esther Duflo</div>
+          </li>
+          <li class="book-item">
+            <div class="book-title">Doing Economics: What You Should Have Learned in Grad School — But Didn't</div>
+            <div class="book-author">Marc F. Bellemare</div>
+          </li>
+          <li class="book-item">
+            <div class="book-title">The Gravity Module of International Trade</div>
+            <div class="book-author">Various</div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- STATISTICS & BAYESIAN -->
+      <div class="shelf-genre">
+        <div class="shelf-genre-title">Statistics &amp; Bayesian Methods</div>
+        <ul class="book-list">
+          <li class="book-item">
+            <div class="book-title">Statistics for People Who (Think They) Hate Statistics</div>
+            <div class="book-author">Neil J. Salkind &amp; Bruce B. Frey</div>
+          </li>
+          <li class="book-item">
+            <div class="book-title">A First Course in Bayesian Statistical Methods</div>
+            <div class="book-author">Peter D. Hoff</div>
+          </li>
+          <li class="book-item">
+            <div class="book-title">Survey Sampling</div>
+            <div class="book-author">SAGE Publications</div>
+          </li>
+          <li class="book-item">
+            <div class="book-title">Measuring Total Factor Productivity</div>
+            <div class="book-author">World Bank Guide</div>
+          </li>
+          <li class="book-item">
+            <div class="book-title">Technical Efficiency Measurement by Data Envelopment Analysis</div>
+            <div class="book-author">Various</div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- STATA & R -->
+      <div class="shelf-genre">
+        <div class="shelf-genre-title">Software &amp; Data Tools</div>
+        <ul class="book-list">
+          <li class="book-item">
+            <div class="book-title">A Visual Guide to Stata Graphics</div>
+            <div class="book-author">Michael N. Mitchell</div>
+          </li>
+          <li class="book-item">
+            <div class="book-title">Seventy-Six Stata Tips (2nd Edition)</div>
+            <div class="book-author">Nicholas J. Cox et al.</div>
+          </li>
+          <li class="book-item">
+            <div class="book-title">Time Series Using Stata</div>
+            <div class="book-author">Sean Becketti</div>
+          </li>
+          <li class="book-item">
+            <div class="book-title">Phân Tích Dữ Liệu Với R</div>
+            <div class="book-author">Vietnamese · Data Analysis with R</div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2026 Vy Tuong Phan
+  </footer>
+
+</div>
+
+<script src="js/animation.js"></script>
+<script>
+  var toggle = document.getElementById('nav-toggle');
+  var links  = document.getElementById('nav-links');
+  toggle.addEventListener('click', function () { links.classList.toggle('open'); });
+</script>
+
+</body>
+</html>

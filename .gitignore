@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Original HEIC/HEIF source files (converted to jpg)
+*.HEIC
+*.heic
+
+# Prompt/planning files
+prompt.Rmd
+champagne-fizz.html
+
+# PDFs (large files — CV is linked externally; Math PDF is source)
+Math\ -\ Part\ 1.pdf

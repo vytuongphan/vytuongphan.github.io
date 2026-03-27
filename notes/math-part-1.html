@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math 1 Part 1: Differential Calculus — Vy Tuong Phan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@400;500;600&family=Fira+Code:wght@400&display=swap" rel="stylesheet">
+  <!-- KaTeX -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+
+<div class="site-wrapper">
+
+  <!-- NAV -->
+  <nav>
+    <a href="../index.html" class="nav-brand">Vy Tuong Phan</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../research.html">Research</a></li>
+      <li><a href="../cv.html">CV</a></li>
+      <li><a href="index.html" class="active">Notes</a></li>
+      <li><a href="../bookshelf.html">Bookshelf</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <div style="max-width:780px; margin:0 auto; padding: 5rem 2rem 1rem;">
+      <div class="section-label">
+        <a href="index.html" style="color:var(--accent); font-size:inherit">← Notes</a>
+        &nbsp;·&nbsp; LSE Mathematics 1
+      </div>
+      <h1 style="margin-bottom:0.3rem;">Part 1: Differential Calculus</h1>
+      <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:0;">
+        Course: <a href="https://learning.edx.org/course/course-v1:LSE+LSEMT105a+3T2023/home" target="_blank" rel="noopener">LSEMT105a on edX</a>
+      </p>
+    </div>
+
+    <!-- Loading state -->
+    <div class="loading" id="loading">
+      <div class="spinner"></div>
+      Loading notes…
+    </div>
+
+    <!-- Notes content injected here -->
+    <div class="glass-card notes-content" id="notes-content" style="max-width:780px; margin:0 auto 4rem; display:none;"></div>
+
+  </main>
+
+  <footer>
+    &copy; 2026 Vy Tuong Phan
+  </footer>
+
+</div>
+
+<!-- marked.js for Markdown → HTML -->
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+<!-- KaTeX core + auto-render -->
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="../js/animation.js"></script>
+
+<script>
+// Mobile nav
+var toggle = document.getElementById('nav-toggle');
+var navLinks = document.getElementById('nav-links');
+toggle.addEventListener('click', function () { navLinks.classList.toggle('open'); });
+
+// Load and render the markdown notes
+(function () {
+  var loadingEl = document.getElementById('loading');
+  var contentEl = document.getElementById('notes-content');
+
+  // Protect math delimiters from the markdown parser
+  function protectMath(text) {
+    var blocks = [];
+
+    // Protect display math first ($$...$$)
+    text = text.replace(/\$\$([\s\S]+?)\$\$/g, function (match) {
+      blocks.push(match);
+      return '\x00MATHD' + (blocks.length - 1) + '\x00';
+    });
+
+    // Protect inline math ($...$) — not preceded/followed by $
+    text = text.replace(/\$([^\$\n]{1,200}?)\$/g, function (match) {
+      blocks.push(match);
+      return '\x00MATHI' + (blocks.length - 1) + '\x00';
+    });
+
+    return { text: text, blocks: blocks };
+  }
+
+  function restoreMath(html, blocks) {
+    html = html.replace(/\x00MATHD(\d+)\x00/g, function (_, i) { return blocks[parseInt(i)]; });
+    html = html.replace(/\x00MATHI(\d+)\x00/g, function (_, i) { return blocks[parseInt(i)]; });
+    return html;
+  }
+
+  fetch('../Math-Part-1.md')
+    .then(function (res) {
+      if (!res.ok) throw new Error('Failed to load notes');
+      return res.text();
+    })
+    .then(function (md) {
+      var protected_ = protectMath(md);
+      var html = marked.parse(protected_.text);
+      html = restoreMath(html, protected_.blocks);
+
+      contentEl.innerHTML = html;
+      loadingEl.style.display = 'none';
+      contentEl.style.display = 'block';
+
+      // Render math with KaTeX
+      renderMathInElement(contentEl, {
+        delimiters: [
+          { left: '$$', right: '$$', display: true  },
+          { left: '$',  right: '$',  display: false }
+        ],
+        throwOnError: false
+      });
+    })
+    .catch(function (err) {
+      loadingEl.innerHTML = '<p style="color:var(--text-secondary)">Could not load notes. ' + err.message + '</p>';
+    });
+})();
+</script>
+
+</body>
+</html>
