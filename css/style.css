@@ -652,6 +652,33 @@ footer {
 }
 
 /* ============================================================
+   LIGHTBOX
+   ============================================================ */
+#lightbox-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+}
+#lightbox-overlay.active {
+  display: flex;
+}
+#lightbox-img {
+  max-width: 92vw;
+  max-height: 92vh;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+  cursor: default;
+}
+
+/* ============================================================
    NAV RIGHT GROUP + THEME TOGGLE
    ============================================================ */
 .nav-right {
