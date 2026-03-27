@@ -240,7 +240,6 @@ hr {
   mix-blend-mode: luminosity;
   opacity: 0.92;
   transition: opacity 0.3s, mix-blend-mode 0.3s;
-  cursor: zoom-in;
 }
 .hero-avatar:hover {
   opacity: 1;
