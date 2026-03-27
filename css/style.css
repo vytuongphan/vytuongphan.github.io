@@ -19,12 +19,12 @@
 
 /* ---- Reset ---- */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; font-size: 19px; }
 
 body {
   min-height: 100vh;
   font-family: 'Crimson Pro', 'Georgia', 'Times New Roman', serif;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.75;
   color: var(--text-primary);
   background: var(--navy-deep);
@@ -710,7 +710,7 @@ footer {
    RESPONSIVE
    ============================================================ */
 @media (max-width: 700px) {
-  body { font-size: 16px; }
+  body { font-size: 18px; }
 
   nav { padding: 0 1.2rem; }
 
