@@ -18,7 +18,7 @@
   if (btn) {
     btn.addEventListener('click', function () {
       var next = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-      localStorage.setItem('theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
       apply(next);
     });
   }
