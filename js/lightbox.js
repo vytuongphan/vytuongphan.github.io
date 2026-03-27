@@ -65,8 +65,8 @@
     if (e.key === 'ArrowLeft')   show(current - 1);
   });
 
-  // Collect all images and attach click handlers
-  document.querySelectorAll('img').forEach(function (el, i) {
+  // Collect all images and attach click handlers (skip avatar)
+  document.querySelectorAll('img:not(.hero-avatar)').forEach(function (el, i) {
     images.push(el);
     el.style.cursor = 'zoom-in';
     el.addEventListener('click', function () { open(i); });
