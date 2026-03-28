@@ -525,9 +525,9 @@ hr {
 .note-card.coming-soon {
   opacity: 0.55;
   cursor: default;
-  pointer-events: none;
 }
 .note-card.coming-soon:hover { transform: none; }
+.note-card.coming-soon a { pointer-events: auto; cursor: pointer; }
 
 /* Notes content (math page) */
 .notes-content {
