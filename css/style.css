@@ -674,6 +674,15 @@ hr {
   color: var(--text-primary);
   line-height: 1.4;
 }
+.book-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.book-item:has(.book-link):hover { border-color: var(--accent); }
+.book-link:hover .book-title { color: var(--accent); text-decoration: none; }
+.book-link:hover { text-decoration: none; }
+
 .book-author {
   font-size: 0.78rem;
   color: var(--text-muted);
