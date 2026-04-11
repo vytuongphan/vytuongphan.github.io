@@ -963,13 +963,13 @@ For an $m \times n$ matrix $A$ and an $n \times p$ matrix $B$, the product $AB$ 
 
 $$\underbrace{\begin{pmatrix} \color{red}{a_{11}} & \color{red}{a_{12}} \\ a_{21} & a_{22} \end{pmatrix}}_A \times \begin{pmatrix} \color{red}{b_{11}} \\ \color{red}{b_{21}} \end{pmatrix}\!\Big|\!\begin{pmatrix} b_{12} \\ b_{22} \end{pmatrix}\!\Big|\!\begin{pmatrix}\color{green}{b_{13}} \\ \color{green}{b_{23}} \end{pmatrix}$$
 
-$$= \begin{pmatrix} c_{11} & c_{12} & \color{green}{c_{13}} \\ \cdots & \cdots & \cdots \end{pmatrix}$$
+$$= \begin{pmatrix} \color{red}{c_{11}} & c_{12} & \color{green}{c_{13}} \\ \cdots & \cdots & \cdots \end{pmatrix}$$
 
 The first row of $A$ (highlighted in <span style="color:red">red</span>) dotted with each column of $B$ gives the first row of $C$.
 
 **Numerical example:**
 
-$$\begin{pmatrix} 1 & 3 \\ 2 & 1 \end{pmatrix} \times \begin{pmatrix} \color{red}{1} \\ \color{red}{2} \end{pmatrix}\!\Big|\!\begin{pmatrix} 2 \\ 3 \end{pmatrix}\!\Big|\!\begin{pmatrix} \color{green}{1} \\ \color{green}{5} \end{pmatrix} = \begin{pmatrix} \color{red}{7} & 11 & \color{green}{16} \\ 4 & 7 & \color{green}{7} \end{pmatrix}$$
+$$\begin{pmatrix} 1 & 3 \\ 2 & 1 \end{pmatrix} \times \begin{pmatrix} \color{red}{1} \\ \color{red}{2} \end{pmatrix}\!\Big|\!\begin{pmatrix} 2 \\ 3 \end{pmatrix}\!\Big|\!\begin{pmatrix} \color{green}{1} \\ \color{green}{5} \end{pmatrix} = \begin{pmatrix} \color{red}{7} & 11 & \color{green}{16} \\ \color{red}{4} & 7 & \color{green}{7} \end{pmatrix}$$
 
 **Algebraic rules:**
 
